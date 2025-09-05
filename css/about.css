@@ -1,0 +1,255 @@
+/* About css */
+
+/* ===== HERO SECTION ===== */
+.about-hero {
+  position: relative;
+  height: 50vh;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  background-color: var(--accent-dark);
+  overflow: hidden;
+}
+
+.about-hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.7;
+}
+
+.about-hero-content {
+  position: relative;
+  z-index: 1;
+  color: white;
+  text-align: center;
+  width: 100%;
+  padding: var(--spacing-md);
+}
+
+.about-hero-title {
+  font-size: 3rem;
+  color: white;
+  margin-bottom: var(--spacing-sm);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.about-hero-subtitle {
+  font-size: 1.25rem;
+  max-width: 800px;
+  margin: 0 auto;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* ===== MISSION SECTION ===== */
+.mission-section {
+  padding: var(--spacing-lg) 0;
+  background-color: white;
+}
+
+.mission-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-lg);
+  align-items: center;
+}
+
+.mission-content {
+  max-width: 800px;
+}
+
+.mission-title {
+  margin-bottom: var(--spacing-sm);
+}
+
+.mission-text {
+  font-size: 1.1rem;
+  margin-bottom: var(--spacing-md);
+}
+
+.mission-image {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+}
+
+/* ===== TEAM SECTION ===== */
+.team-section {
+  padding: var(--spacing-lg) 0;
+  background-color: var(--offwhite);
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--spacing-md);
+}
+
+.team-card {
+  background-color: white;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.team-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.team-content {
+  padding: var(--spacing-md);
+}
+
+.team-name {
+  margin-bottom: var(--spacing-xs);
+}
+
+.team-position {
+  color: var(--brand-gray);
+  font-weight: 600;
+  margin-bottom: var(--spacing-sm);
+}
+
+.team-bio {
+  margin-bottom: var(--spacing-sm);
+}
+
+.team-certifications {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-xs);
+}
+
+.certification-badge {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  background-color: var(--offwhite);
+  border-radius: var(--radius-sm);
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+/* ===== WHY CHOOSE US ===== */
+.why-choose-section {
+  padding: var(--spacing-lg) 0;
+}
+
+.why-choose-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-lg);
+  align-items: center;
+}
+
+.why-choose-content {
+  max-width: 800px;
+}
+
+.why-choose-list {
+  list-style: none;
+  padding: 0;
+  margin: var(--spacing-md) 0;
+}
+
+.why-choose-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: var(--spacing-md);
+}
+
+.why-choose-icon {
+  font-size: 2rem;
+  color: var(--accent-earth);
+  margin-right: var(--spacing-sm);
+  flex-shrink: 0;
+}
+
+.why-choose-text {
+  flex-grow: 1;
+}
+
+.why-choose-title {
+  font-weight: 600;
+  margin-bottom: var(--spacing-xs);
+}
+
+.why-choose-description {
+  color: var(--text);
+}
+
+.why-choose-image {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+}
+
+/* ===== LICENSE SECTION ===== */
+.license-section {
+  background-color: var(--accent-earth);
+  color: white;
+  padding: var(--spacing-md) 0;
+  text-align: center;
+}
+
+.license-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.license-title {
+  color: white;
+  margin-bottom: var(--spacing-xs);
+}
+
+.license-number {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+/* ===== MEDIA QUERIES ===== */
+@media (min-width: 768px) {
+  .about-hero-title {
+    font-size: 4rem;
+  }
+  
+  .about-hero-subtitle {
+    font-size: 1.5rem;
+  }
+  
+  .mission-container {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .why-choose-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 992px) {
+  .about-hero-title {
+    font-size: 4.5rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .about-hero {
+    height: auto;
+    padding: 120px 0 var(--spacing-lg);
+  }
+}

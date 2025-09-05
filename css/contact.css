@@ -1,0 +1,343 @@
+/* contact css */
+
+/* ===== HERO SECTION ===== */
+.contact-hero {
+  position: relative;
+  height: 40vh;
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  background-color: var(--accent-dark);
+  overflow: hidden;
+}
+
+.contact-hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.7;
+}
+
+.contact-hero-content {
+  position: relative;
+  z-index: 1;
+  color: white;
+  text-align: center;
+  width: 100%;
+  padding: var(--spacing-md);
+}
+
+.contact-hero-title {
+  font-size: 3rem;
+  color: white;
+  margin-bottom: var(--spacing-sm);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.contact-hero-subtitle {
+  font-size: 1.25rem;
+  max-width: 800px;
+  margin: 0 auto;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* ===== CONTACT SECTION ===== */
+.contact-section {
+  padding: var(--spacing-lg) 0;
+}
+
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-lg);
+}
+
+@media (min-width: 768px) {
+  .contact-container {
+    grid-template-columns: 3fr 2fr;
+  }
+}
+
+@media (max-width: 767px) {
+  .contact-section {
+    padding: var(--spacing-md) 0;
+  }
+  
+  .contact-form-container,
+  .contact-info-container {
+    padding: var(--spacing-sm);
+  }
+}
+
+.contact-form-container {
+  background-color: white;
+  border-radius: var(--radius-md);
+  padding: var(--spacing-md);
+  box-shadow: var(--shadow-md);
+}
+
+.contact-form-title {
+  margin-bottom: var(--spacing-md);
+}
+
+.contact-form {
+  display: grid;
+  gap: var(--spacing-md);
+}
+
+.form-group {
+  margin-bottom: var(--spacing-md);
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: var(--spacing-xs);
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: var(--radius-sm);
+  font-family: var(--body-font);
+  font-size: 1rem;
+  transition: border-color var(--transition-normal);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--accent-earth);
+  box-shadow: 0 0 0 2px rgba(96, 91, 82, 0.1);
+}
+
+.file-upload {
+  position: relative;
+}
+
+.file-help {
+  font-size: 0.875rem;
+  color: var(--brand-gray);
+  margin-top: var(--spacing-xs);
+}
+
+.btn-block {
+  width: 100%;
+}
+
+.file-upload-icon {
+  font-size: 2rem;
+  color: var(--accent-earth);
+  margin-right: var(--spacing-sm);
+}
+
+.file-upload-text {
+  font-weight: 600;
+}
+
+.file-upload-input {
+  position: absolute;
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.file-upload-preview {
+  display: none;
+  margin-top: var(--spacing-sm);
+  padding: var(--spacing-sm);
+  background-color: var(--offwhite);
+  border-radius: var(--radius-sm);
+}
+
+.file-upload-preview.active {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.file-upload-preview-name {
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 80%;
+}
+
+.file-upload-preview-remove {
+  background: none;
+  border: none;
+  color: var(--cta);
+  cursor: pointer;
+  font-size: 1.25rem;
+}
+
+/* ===== CONTACT INFO ===== */
+.contact-info-container {
+  background-color: white;
+  border-radius: var(--radius-md);
+  padding: var(--spacing-md);
+  box-shadow: var(--shadow-md);
+}
+
+.contact-info-title {
+  margin-bottom: var(--spacing-md);
+}
+
+.contact-info-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: var(--spacing-md);
+}
+
+.contact-info-icon {
+  font-size: 1.5rem;
+  color: var(--accent-earth);
+  margin-right: var(--spacing-sm);
+  flex-shrink: 0;
+}
+
+.contact-info-content {
+  flex-grow: 1;
+}
+
+.contact-info-label {
+  font-weight: 600;
+  margin-bottom: var(--spacing-xs);
+}
+
+.contact-info-value {
+  margin-bottom: var(--spacing-xs);
+  color: var(--text-dark);
+}
+
+.contact-info-note {
+  font-size: 0.875rem;
+  color: var(--brand-gray);
+}
+
+.contact-social {
+  margin-top: var(--spacing-md);
+}
+
+.contact-social-title {
+  font-weight: 600;
+  margin-bottom: var(--spacing-sm);
+}
+
+.contact-social-links {
+  display: flex;
+  gap: var(--spacing-sm);
+}
+
+.contact-social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.1);
+  color: var(--accent-dark);
+  transition: all var(--transition-normal);
+}
+
+.contact-social-link:hover {
+  background-color: var(--cta);
+  color: white;
+}
+
+/* ===== MAP SECTION ===== */
+.map-section {
+  padding-bottom: var(--spacing-lg);
+}
+
+.map-container {
+  height: 400px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* ===== FLOATING CALL BUTTON ===== */
+.floating-call-btn {
+  position: fixed;
+  bottom: var(--spacing-md);
+  right: var(--spacing-md);
+  z-index: 99;
+  display: none;
+}
+
+.floating-call-btn .btn {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: 50px;
+  box-shadow: var(--shadow-lg);
+}
+
+.floating-call-icon {
+  font-size: 1.25rem;
+}
+
+/* ===== BUTTON STYLES ===== */
+.btn-primary:hover {
+  background-color: #a51717;
+  color: #ffffff;
+}
+
+/* ===== MEDIA QUERIES ===== */
+@media (min-width: 768px) {
+  .contact-hero-title {
+    font-size: 4rem;
+  }
+  
+  .contact-hero-subtitle {
+    font-size: 1.5rem;
+  }
+  
+  .contact-container {
+    grid-template-columns: 3fr 2fr;
+  }
+  
+  .form-row {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .form-row-full {
+    grid-column: span 2;
+  }
+}
+
+@media (min-width: 992px) {
+  .contact-hero-title {
+    font-size: 4.5rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .contact-hero {
+    height: auto;
+    padding: 120px 0 var(--spacing-lg);
+  }
+  
+  .floating-call-btn {
+    display: block;
+  }
+}
